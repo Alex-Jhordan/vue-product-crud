@@ -38,27 +38,14 @@ export function confirm(id, name) {
     })
 }
 
-export function sendRequest (method, parameters, url, message) {
+export function sendRequest (method, parameters, url) {
     axios({method:method, url:url, data:parameters})
-        .then(function(response) {
-            var status = response.data[0]['status'];
-            console.log(status);
-
-            if (status === 'success') {
-                showAlert(message, status);
-                window.setTimeout(function() {
-                    window.location.href='/';
-                }, 1000);
-            } else {
-                var list = '';
-                var errors = response.data[1]['errors'];
-                Object.keys(errors).forEach(
-                    key => list += errors[key][0] + '.'
-                );
-                
-                showAlert(list, 'error');
-            }
-        }).catch(function(error) {
-            showAlert('Error request', 'error');
+        .then(function (response) {
+            showAlert(response.data.message, 'success');
+            window.setTimeout(function() {
+                window.location.href='/';
+            }, 2000);
+        }).catch(function (error) {
+            showAlert(error.response.data.message, 'error');
         });
 }

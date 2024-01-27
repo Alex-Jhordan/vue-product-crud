@@ -61,7 +61,7 @@
                     showAlert('Enter price', 'warning', 'price');
                 } else {
                     var parameters = {name: this.name.trim(), description: this.description.trim(), price: this.price}
-                    sendRequest('POST', parameters, this.url, 'Saved product');
+                    sendRequest('POST', parameters, this.url);
                 }
             }
         }

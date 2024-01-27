@@ -71,16 +71,17 @@
                     showAlert('Enter price', 'warning', 'price');
                 } else {
                     var parameters = {name: this.name.trim(), description: this.description.trim(), price: this.price}
-                    sendRequest('PUT', parameters, this.url, 'Updated product');
+                    sendRequest('PUT', parameters, this.url);
                 }
             },
             edit() {
                 axios.get(this.url)
                     .then(
                         response => (
-                            this.name = response.data['name'],
-                            this.description = response.data['description'],
-                            this.price = response.data['price']
+                            console.log(response.data),
+                            this.name = response.data.name,
+                            this.description = response.data.description,
+                            this.price = response.data.price
                         )
                     );
             }
