@@ -1,29 +1,14 @@
-# vue-product-crud
+# Product Crud
 
-This template should help get you started developing with Vue 3 in Vite.
+## Acerca del proyecto
 
-## Recommended IDE Setup
+Proyecto personal que consume APIS para las operaciones de un CRUD de productos, realicé el proyecto utilizando el framework VUE.js con Axios y SweetAlert2 para las alertas.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Este es el link al repositorio de la API -> [API Product CRUD](https://github.com/Alex-Jhordan/api-product-crud)
 
-## Customize configuration
+## Enlace a documentación de tecnologias usadas
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- [Vue.js](https://vuejs.org/guide/quick-start.html)
+- [Axios](https://axios-http.com/docs/intro)
+- [SweetAlert2](https://sweetalert2.github.io/)
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
